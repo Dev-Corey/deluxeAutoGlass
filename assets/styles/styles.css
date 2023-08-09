@@ -96,12 +96,6 @@ nav ul li a {
 	}
 }
 
-@media (min-width: 35em) and (max-width: 55em) {
-	.primary-navigation a > [aria-hidden] {
-		display: none;
-	}
-}
-
 /* Hero Section Styles */
 .hero {
 	background: url("/assets/img/DAGmainLogo.jpg") no-repeat center;
