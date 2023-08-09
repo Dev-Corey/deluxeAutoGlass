@@ -98,7 +98,9 @@ nav ul li a {
 
 /* Hero Section Styles */
 .hero {
-	background: url("/assets/img/DAGmainLogo.jpg") no-repeat center;
+	background-image: url("/assets/img/DAGmainLogo.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: contain;
 	height: 500px;
 	display: flex;
