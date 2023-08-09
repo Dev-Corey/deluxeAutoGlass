@@ -96,6 +96,12 @@ nav ul li a {
 	}
 }
 
+@media (min-width: 35em) and (max-width: 55em) {
+	.primary-navigation a > [aria-hidden] {
+		display: none;
+	}
+}
+
 /* Hero Section Styles */
 .hero {
 	background: url("/assets/img/DAGmainLogo.jpg") no-repeat center;
@@ -127,6 +133,7 @@ nav ul li a {
 	width: 100px;
 	display: block;
 	margin: auto;
+	margin-bottom: 5rem;
 	padding: 10px 25px;
 	background-color: red;
 	color: white;
