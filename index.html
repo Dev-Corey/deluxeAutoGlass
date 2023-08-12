@@ -16,28 +16,28 @@
 	</head>
 
 	<body>
-		<header class="primary-header flex">
+		<header class="flex">
 			<div class="logo">
-				<a href="/index.html"><img src="assets/img/DAGicon.png" alt="Deluxe Auto Glass Shield Logo" /></a>
+				<a href="#"><img src="assets/img/DAGicon.png" alt="Deluxe Auto Glass Shield Logo" /></a>
 			</div>
 
-			<button class="mobile-nav-toggle" aria-expanded="false">
+			<button class="navToggle" aria-expanded="false">
 				<span></span>
 			</button>
 
 			<nav>
-				<ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-					<li class="active">
-						<a class="navItem" href="#">Home </a>
+				<ul id="navBar" data-visible="false" class="navBar flex">
+					<li class="navItem homeLink">
+						<a class="navLink" href="#">Home</a>
 					</li>
-					<li class="active">
-						<a class="navItem" href="#gallery">Gallery </a>
+					<li class="navItem">
+						<a class="navLink" href="#gallery">Gallery</a>
 					</li>
-					<li class="active">
-						<a class="navItem" href="#about">About </a>
+					<li class="navItem">
+						<a class="navLink" href="#about">About</a>
 					</li>
-					<li class="active">
-						<a class="navItem" href="#contact">Contact </a>
+					<li class="navItem">
+						<a class="navLink" href="#contact">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -83,13 +83,14 @@
 			<div class="contact-content">
 				<h2>Contact Us</h2>
 				<p>If you would like to receive a quote or have any questions feel free to get in touch with us.</p>
-				<form onsubmit="sendEmail(); reset(); return false;">
-					<input type="text" id="name" placeholder="Name" required />
-					<input type="email" id="email" placeholder="Email" required />
-					<input type="tel" id="phone" placeholder="Phone Number" required />
+				<form id="contact-form">
+					<input type="text" id="user_name" name="user_name" placeholder="Name" required />
+					<input type="tel" id="user_phone" name="user_phone" placeholder="Phone Number" required />
+					<input type="email" id="user_email" name="user_email" placeholder="Email" required />
 
-					<textarea id="inquiry" placeholder="How can we help?" required></textarea>
-					<button type="submit">Send Message</button>
+					<textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+
+					<button type="submit" class="submit-btn">Send Message</button>
 				</form>
 			</div>
 		</section>
@@ -97,6 +98,6 @@
 		<footer>
 			<p>&copy; 2023 Deluxe Auto Glass. All rights reserved.</p>
 		</footer>
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	</body>
 </html>
