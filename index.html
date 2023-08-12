@@ -12,6 +12,7 @@
 		<link rel="manifest" href="site.webmanifest" />
 		<link rel="stylesheet" href="assets/styles/styles.css" />
 		<script src="js/nav.js" defer></script>
+		<script src="js/contact.js" defer></script>
 	</head>
 
 	<body>
@@ -82,12 +83,12 @@
 			<div class="contact-content">
 				<h2>Contact Us</h2>
 				<p>If you would like to receive a quote or have any questions feel free to get in touch with us.</p>
-				<form>
-					<input type="text" placeholder="Your Name" />
-					<input type="email" placeholder="Your Email" />
-					<input type="tel" placeholder="Your Phone Number" />
+				<form onsubmit="sendEmail(); reset(); return false;">
+					<input type="text" id="name" placeholder="Name" required />
+					<input type="email" id="email" placeholder="Email" required />
+					<input type="tel" id="phone" placeholder="Phone Number" required />
 
-					<textarea placeholder="Your Message"></textarea>
+					<textarea id="inquiry" placeholder="How can we help?" required></textarea>
 					<button type="submit">Send Message</button>
 				</form>
 			</div>
@@ -96,5 +97,6 @@
 		<footer>
 			<p>&copy; 2023 Deluxe Auto Glass. All rights reserved.</p>
 		</footer>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</body>
 </html>
