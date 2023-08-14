@@ -1,13 +1,28 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 html {
 	scroll-behavior: smooth;
 }
 
+/*++++++++++++++++++++++++++ START varibles ++++++++++++++++++++++++++++*/
+:root {
+	/*========== Colors ==========*/
+	--first-color: hsl(3, 100%, 42%);
+	--text-color: #fff;
+	--text-color-black: hsl(228, 3%, 66%);
+	--body-color: hsl(240, 8%, 5%);
+
+	/*========== Font and typography ==========*/
+	--body-font: 'Poppins', sans-serif;
+}
+/*++++++++++++++++++++++++++ END varibles ++++++++++++++++++++++++++++*/
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Arial, sans-serif;
-	background-color: #0b0b0d;
+	font-family: var(--body-font);
+	background-color: var(--body-color);
 	color: white;
 	overflow-x: hidden;
 }
@@ -87,7 +102,7 @@ nav ul li a {
 		position: fixed;
 		z-index: 9999;
 		background-color: transparent;
-		background-image: url("../img/DAGicon.png");
+		background-image: url('../img/DAGicon.png');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
@@ -99,17 +114,18 @@ nav ul li a {
 	}
 
 	.navToggle.active {
-		background-image: url("../img/X.png");
+		background-image: url('../img/X.png');
 	}
 }
 
 /* Hero Section Styles */
 .hero {
-	background-image: url("../img/DAGmainLogo.jpg");
+	background-image: url('../img/DAGmainLogo.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	height: 500px;
+	height: 75vh;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -138,7 +154,7 @@ nav ul li a {
 	margin: auto;
 	margin-bottom: 5rem;
 	padding: 10px 25px;
-	background-color: red;
+	background-color: #d50b00;
 	color: white;
 	text-align: center;
 	text-decoration: none;
@@ -146,7 +162,26 @@ nav ul li a {
 }
 
 /* Gallery Section Styles */
+
 .gallery {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--body-color);
+	overflow: hidden;
+}
+
+.gallery .carousel {
+	width: 300px;
+	margin: 100px auto 0;
+	overflow: visible;
+}
+
+.carousel img {
+	border-radius: 2rem;
+	-webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+
+/* .gallery {
 	background-color: #0b0b0d;
 	padding: 50px;
 	color: white;
@@ -167,7 +202,7 @@ nav ul li a {
 	width: 100%;
 	height: auto;
 	border-radius: 4px;
-}
+} */
 
 /* About Section Styles */
 .about {
@@ -206,7 +241,7 @@ nav ul li a {
 
 .contact form button {
 	padding: 10px 20px;
-	background-color: red;
+	background-color: #d50b00;
 	color: white;
 	border: none;
 	border-radius: 4px;
