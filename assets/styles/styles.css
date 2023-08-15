@@ -11,7 +11,7 @@ html {
 	--first-color: hsl(3, 100%, 42%);
 	--text-color: #fff;
 	--text-color-black: hsl(228, 3%, 66%);
-	--body-color: hsl(240, 8%, 5%);
+	--body-color: #0b0b0d;
 
 	/*========== Font and typography ==========*/
 	--body-font: 'Poppins', sans-serif;
@@ -172,7 +172,7 @@ nav ul li a {
 
 .gallery .carousel {
 	width: 300px;
-	margin: 0px auto 0;
+	margin: 3rem auto 0;
 	overflow: visible;
 }
 
