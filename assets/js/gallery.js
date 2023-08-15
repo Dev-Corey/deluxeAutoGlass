@@ -4,9 +4,8 @@ $('.carousel').flipster({
 	autoplay: 2500,
 	touch: true,
 	scrollwheel: false,
-	pauseOnHover: true,
+	pauseOnHover: false,
 	click: true,
-	// buttons: true,
 	spacing: 0,
 	start: 'center',
 });

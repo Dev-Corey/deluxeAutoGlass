@@ -172,12 +172,13 @@ nav ul li a {
 
 .gallery .carousel {
 	width: 300px;
-	margin: 100px auto 0;
+	margin: 0px auto 0;
 	overflow: visible;
 }
 
 .carousel img {
-	border-radius: 2rem;
+	margin-bottom: 75px;
+	border-radius: 10px;
 	-webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
 }
 
