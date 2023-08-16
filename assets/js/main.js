@@ -1,4 +1,4 @@
-/*=============== SWIPER JS GALLERY ===============*/
+/*=============== Gallery - Swiper.js ===============*/
 let swiperCards = new Swiper('.gallery-cards', {
 	loop: true,
 	loopedSlides: 5,

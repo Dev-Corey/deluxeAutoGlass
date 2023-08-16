@@ -8,9 +8,9 @@ html {
 /*++++++++++++++++++++++++++ START varibles ++++++++++++++++++++++++++++*/
 :root {
 	/*========== Colors ==========*/
-	--first-color: hsl(3, 100%, 42%);
+	--first-color: #d50b00;
 	--text-color: #fff;
-	--text-color-black: hsl(228, 3%, 66%);
+	--text-color-grey: hsl(228, 3%, 66%);
 	--body-color: #0b0b0d;
 
 	/*========== Font and typography ==========*/
@@ -23,8 +23,9 @@ body {
 	padding: 0;
 	font-family: var(--body-font);
 	background-color: var(--body-color);
-	color: white;
+	color: var(--text-color);
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 .flex {
@@ -34,8 +35,8 @@ body {
 
 /* Header Styles */
 header {
-	background-color: #0b0b0d;
-	color: white;
+	background-color: var(--body-color);
+	color: var(--text-color);
 	padding: 10px;
 	align-items: center;
 	justify-content: space-between;
@@ -59,7 +60,7 @@ nav ul li {
 }
 
 nav ul li a {
-	color: white;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
@@ -135,7 +136,7 @@ nav ul li a {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	color: white;
+	color: var(--text-color);
 }
 
 .hero h1 {
@@ -154,8 +155,8 @@ nav ul li a {
 	margin: auto;
 	margin-bottom: 5rem;
 	padding: 10px 25px;
-	background-color: #d50b00;
-	color: white;
+	background-color: var(--first-color);
+	color: var(--text-color);
 	text-align: center;
 	text-decoration: none;
 	border-radius: 2rem;
@@ -176,59 +177,103 @@ nav ul li a {
 	overflow: visible;
 }
 
+@media (max-width = 420px) {
+	.carousel {
+		margin: 3rem auto 0;
+	}
+}
+
 .carousel img {
 	margin-bottom: 75px;
 	border-radius: 10px;
 	-webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
 }
 
-/* .gallery {
-	background-color: #0b0b0d;
-	padding: 50px;
-	color: white;
+/* Services Section Styles */
+
+.services {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
-.gallery h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
+.services img {
+	width: 10rem;
+	height: 10rem;
 }
 
-.image-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 20px;
+.servicesContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	flex-wrap: wrap;
+	z-index: 1;
 }
 
-.image-item img {
-	width: 100%;
-	height: auto;
-	border-radius: 4px;
-} */
-
-/* About Section Styles */
-.about {
-	background-color: #a7a8ac;
-	padding: 50px;
-	color: white;
+.servicesContainer .services-card {
+	position: relative;
+	width: 300px;
+	height: 450px;
+	margin: 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
 }
 
-.about h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
+.servicesContainer .services-card .services-content {
+	padding: 20px;
+	text-align: center;
+	transition: 0.5s;
+	transform: translateZ(200px);
+}
+
+.services-content p {
+	font-size: 1em;
+	color: var(--text-color);
+	font-weight: 300;
+}
+
+.services-content a {
+	position: relative;
+	display: inline-block;
+	padding: 8px 20px;
+	margin-top: 15px;
+	background: var(--first-color);
+	color: var(--text-color);
+	text-decoration: none;
+	border-radius: 20px;
+	font-weight: 500;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section Styles */
 .contact {
-	background-color: #0b0b0d;
+	background-color: var(--body-color);
 	background: url(../img/DAGicon.png) no-repeat center;
-
 	padding: 50px;
-	color: white;
+	color: var(--text-color);
 }
 
 .contact h2 {
 	font-size: 24px;
 	margin-bottom: 20px;
+}
+
+.contact h2,
+p {
+	text-align: center;
 }
 
 .contact form input,
@@ -242,8 +287,8 @@ nav ul li a {
 
 .contact form button {
 	padding: 10px 20px;
-	background-color: #d50b00;
-	color: white;
+	background-color: var(--first-color);
+	color: var(--text-color);
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
@@ -251,8 +296,8 @@ nav ul li a {
 
 /* Footer Styles */
 footer {
-	background-color: #0b0b0d;
-	color: white;
+	background-color: var(--body-color);
+	color: var(--text-color);
 	text-align: center;
 	padding: 20px;
 }
