@@ -64,7 +64,8 @@ nav ul li a {
 	text-decoration: none;
 }
 
-.homeLink {
+.homeLink,
+.igLink {
 	display: none;
 }
 
@@ -90,7 +91,8 @@ nav ul li a {
 		display: none;
 	}
 
-	.homeLink {
+	.homeLink,
+	.igLink {
 		display: flex;
 	}
 
@@ -292,6 +294,21 @@ p {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+}
+
+.contactPhone {
+	display: block;
+	width: 150px;
+	padding: 8px 20px;
+	margin: auto;
+	margin-top: 25px;
+	text-align: center;
+	background: var(--first-color);
+	color: var(--text-color);
+	text-decoration: none;
+	border-radius: 20px;
+	font-weight: 500;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
