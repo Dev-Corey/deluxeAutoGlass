@@ -1,11 +1,12 @@
 $('.carousel').flipster({
-	style: 'carousel',
+	style: 'coverflow',
 	loop: true,
-	autoplay: 2500,
+	autoplay: 3000,
 	touch: true,
+	keyboard: true,
 	scrollwheel: false,
-	pauseOnHover: false,
+	pauseOnHover: true,
 	click: true,
-	spacing: 0,
+	spacing: -0.2,
 	start: 'center',
 });
