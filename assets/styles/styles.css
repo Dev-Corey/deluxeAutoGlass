@@ -46,26 +46,29 @@ header {
 	display: none;
 }
 
-nav ul {
+.navBar {
 	list-style-type: none;
-	margin: 0;
+	margin: 0 2rem 0 0;
 	padding: 1rem 3rem;
-	background: rgb(167, 168, 172, 0.2);
 	backdrop-filter: blur(0.75rem);
+	background: rgba(166, 164, 171, 0.25);
 	border-radius: 2rem;
 }
 
-nav ul li {
-	display: inline;
+.navBar button {
+	display: flex;
+	background-color: transparent;
+	border: none;
 }
 
-nav ul li a {
+.navBar button a {
 	color: var(--text-color);
+	font-size: 15px;
 	text-decoration: none;
 }
 
-.homeLink,
-.igLink {
+nav .homeLink,
+nav .igLink {
 	display: none;
 }
 
@@ -76,23 +79,45 @@ nav ul li a {
 @media (max-width: 35em) {
 	.navBar {
 		position: fixed;
+		margin: 0;
 		z-index: 1000;
-		inset: 0 0 0 30%;
-		gap: 2rem;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.25);
+		inset: 0 0 0 0%;
 		border-radius: 0;
-		padding: min(30vh, 10rem) 2em;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 
 		transform: translateX(100%);
 		transition: transform 350ms ease-in-out;
 	}
 
+	.navBar button {
+		background-color: var(--first-color);
+		border-radius: 20px;
+		border: 1px solid var(--first-color);
+	}
+
+	.navBar button:hover {
+		background: transparent;
+	}
+
+	.navBar button a {
+		color: var(--text-color);
+		font-size: 20px;
+		width: 100px;
+		padding: 8px 20px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	}
+
 	.logo img {
 		display: none;
 	}
 
-	.homeLink,
-	.igLink {
+	nav .homeLink,
+	nav .igLink {
 		display: flex;
 	}
 
@@ -109,7 +134,7 @@ nav ul li a {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		width: 3rem;
+		width: 4rem;
 		aspect-ratio: 1;
 		border: 0;
 		top: 2rem;
