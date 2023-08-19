@@ -130,7 +130,7 @@ nav .igLink {
 		position: fixed;
 		z-index: 9999;
 		background-color: transparent;
-		background-image: url('../img/DAGicon.png');
+		background-image: url('../img/DAGicon.webp');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
@@ -212,7 +212,7 @@ nav .igLink {
 
 /* Hero Section Styles */
 .hero {
-	background-image: url('../img/DAGmainLogo.jpg');
+	background-image: url('../img/DAGmainLogo.webp');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -356,7 +356,7 @@ nav .igLink {
 /* Contact Section Styles */
 .contact {
 	background-color: var(--body-color);
-	background-image: url('../img/DAGicon.png');
+	background-image: url('../img/DAGicon.webp');
 	background-repeat: no-repeat;
 	background-position: center;
 	padding: 50px;
