@@ -406,7 +406,7 @@ p {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 35em) {
+/* @media (max-width: 35em) {
 	.contact {
 		height: 100vh;
 	}
@@ -422,10 +422,10 @@ p {
 	.contact h2 {
 		margin-bottom: 0;
 	}
-}
+} */
 
 /* Footer Styles */
-.footer {
+footer {
 	margin-top: 2rem;
 	color: var(--text-color);
 	text-align: center;
