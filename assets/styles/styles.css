@@ -5,7 +5,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-/*++++++++++++++++++++++++++ START varibles ++++++++++++++++++++++++++++*/
 :root {
 	/*========== Colors ==========*/
 	--first-color: #d50b00;
@@ -16,7 +15,6 @@ html {
 	/*========== Font and typography ==========*/
 	--body-font: 'Poppins', sans-serif;
 }
-/*++++++++++++++++++++++++++ END varibles ++++++++++++++++++++++++++++*/
 
 body {
 	margin: 0;
@@ -173,10 +171,6 @@ nav .igLink {
 		right: 0px;
 	}
 
-	/* .navToggle.active {
-		background-image: none;
-	} */
-
 	.navToggle.active .hamburger {
 		transform: rotate(225deg);
 	}
@@ -188,26 +182,6 @@ nav .igLink {
 	.navToggle.active .hamburger::before {
 		opacity: 0;
 	}
-
-	/* .navToggle {
-		display: block;
-		position: fixed;
-		z-index: 9999;
-		background-color: transparent;
-		background-image: url('../img/DAGicon.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		width: 4rem;
-		aspect-ratio: 1;
-		border: 0;
-		top: 2rem;
-		right: 2rem;
-	}
-
-	.navToggle.active {
-		background-image: url('../img/X.png');
-	} */
 }
 
 /* Hero Section Styles */
@@ -271,16 +245,9 @@ nav .igLink {
 	overflow: visible;
 }
 
-/* @media (max-width = 420px) {
-	.carousel {
-		margin: 3rem auto 0;
-	}
-} */
-
 .carousel img {
 	margin-bottom: 75px;
 	border-radius: 10px;
-	/* -webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)); */
 }
 
 /* Services Section Styles */
@@ -318,8 +285,6 @@ nav .igLink {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* border-top: 1px solid rgba(255, 255, 255, 0.5);
-	border-left: 1px solid rgba(255, 255, 255, 0.3); */
 	border-top: 1px solid var(--first-color);
 	border-left: 1px solid var(--first-color);
 }
@@ -405,24 +370,6 @@ p {
 	font-weight: 500;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* @media (max-width: 35em) {
-	.contact {
-		height: 100vh;
-	}
-
-	.contact-content {
-		margin-top: 2rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.contact h2 {
-		margin-bottom: 0;
-	}
-} */
 
 /* Footer Styles */
 footer {
