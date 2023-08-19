@@ -80,8 +80,9 @@ nav .igLink {
 		position: fixed;
 		margin: 0;
 		z-index: 1000;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.4);
 		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		inset: 0 0 0 0%;
 		border-radius: 0;
 		gap: 2rem;
@@ -289,7 +290,9 @@ nav .igLink {
 /* Contact Section Styles */
 .contact {
 	background-color: var(--body-color);
-	background: url(../img/DAGicon.png) no-repeat center;
+	background-image: url('../img/DAGicon.png');
+	background-repeat: no-repeat;
+	background-position: center;
 	padding: 50px;
 	color: var(--text-color);
 }
@@ -343,6 +346,7 @@ p {
 	}
 
 	.contact-content {
+		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -355,8 +359,8 @@ p {
 }
 
 /* Footer Styles */
-footer {
-	background-color: var(--body-color);
+.footer {
+	margin-top: 2rem;
 	color: var(--text-color);
 	text-align: center;
 	padding: 20px;
