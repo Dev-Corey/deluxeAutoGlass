@@ -10,7 +10,7 @@ html {
 	/*========== Colors ==========*/
 	--first-color: #d50b00;
 	--text-color: #fff;
-	--text-color-grey: hsl(228, 3%, 66%);
+	--text-color-grey: rgb(166, 167, 171);
 	--body-color: #0b0b0d;
 
 	/*========== Font and typography ==========*/
@@ -224,13 +224,15 @@ nav ul li a {
 	height: 450px;
 	margin: 30px;
 	border-radius: 15px;
-	background-color: rgba(255, 255, 255, 0.01);
+	background-color: rgba(166, 167, 171, 0.6);
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: 1px solid rgba(255, 255, 255, 0.5);
-	border-left: 1px solid rgba(255, 255, 255, 0.3);
+	/* border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.3); */
+	border-top: 1px solid var(--first-color);
+	border-left: 1px solid var(--first-color);
 }
 
 .servicesContainer .services-card .services-content {
@@ -259,7 +261,7 @@ nav ul li a {
 }
 
 .services-content h3 {
-	color: var(--text-color-grey);
+	color: var(--body-color);
 }
 
 /* Contact Section Styles */
