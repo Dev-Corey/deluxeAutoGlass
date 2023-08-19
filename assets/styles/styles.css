@@ -49,7 +49,6 @@ header {
 .navBar {
 	margin: 0 2rem 0 0;
 	padding: 1rem 3rem;
-	/* backdrop-filter: blur(0.75rem); */
 	background: rgba(166, 164, 171, 0.25);
 	border-radius: 2rem;
 }
@@ -80,9 +79,9 @@ nav .igLink {
 		position: fixed;
 		margin: 0;
 		z-index: 1000;
-		background-color: rgba(0, 0, 0, 0.4);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+		background-color: rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 		inset: 0 0 0 0%;
 		border-radius: 0;
 		gap: 2rem;
@@ -95,12 +94,15 @@ nav .igLink {
 
 	.navBar button {
 		background-color: var(--first-color);
-		border-radius: 20px;
-		border: 1px solid var(--first-color);
+		border-radius: 2rem;
+		border-top: 1px solid var(--text-color);
+		border-left: 1px solid var(--text-color);
 	}
 
 	.navBar button:hover {
 		background: transparent;
+		border-top: 3px solid var(--first-color);
+		border-left: 3px solid var(--first-color);
 	}
 
 	.navBar button a {
@@ -139,9 +141,72 @@ nav .igLink {
 		right: 2rem;
 	}
 
+	.hamburger {
+		display: block;
+		position: relative;
+		bottom: 3px;
+	}
+
+	.hamburger,
+	.hamburger::before,
+	.hamburger::after {
+		margin-left: 1.098rem;
+		width: 1rem;
+		height: 3px;
+		background-color: var(--first-color);
+		transition: transform 450ms ease-in-out, opacity 200ms linear;
+	}
+
+	.hamburger::before,
+	.hamburger::after {
+		content: '';
+		position: absolute;
+	}
+
+	.hamburger::before {
+		bottom: 6px;
+		right: 0px;
+	}
+	.hamburger::after {
+		top: 6px;
+		right: 0px;
+	}
+
+	/* .navToggle.active {
+		background-image: none;
+	} */
+
+	.navToggle.active .hamburger {
+		transform: rotate(225deg);
+	}
+
+	.navToggle.active .hamburger::after {
+		transform: rotate(90deg) translate(-6px);
+	}
+
+	.navToggle.active .hamburger::before {
+		opacity: 0;
+	}
+
+	/* .navToggle {
+		display: block;
+		position: fixed;
+		z-index: 9999;
+		background-color: transparent;
+		background-image: url('../img/DAGicon.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		width: 4rem;
+		aspect-ratio: 1;
+		border: 0;
+		top: 2rem;
+		right: 2rem;
+	}
+
 	.navToggle.active {
 		background-image: url('../img/X.png');
-	}
+	} */
 }
 
 /* Hero Section Styles */
